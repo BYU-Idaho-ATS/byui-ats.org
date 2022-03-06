@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400&display=swap");
+
+:root {
+    /* Color Palette */
+    --primary-color: #282a36;
+    --secondary-color: #44475a;
+    --accent1-color: #ff79c6;
+    --accent2-color: white;
+
+    /* Fonts */
+    --heading-font: "Poppins", Arial, sans-serif;
+    --paragraph-font: "Ubuntu Mono", monospace, serif;
+
+    --headline-color-on-white: black; /* headlines on a white background */
+    --headline-color-on-color: white; /* headlines on a colored background */
+    --paragraph-color-on-white: black; /* paragraph text on a white background */
+    --paragraph-color-on-color: white; /* paragraph text on a colored background */
+    --paragraph-background-color: black;
+    --nav-link-color: #ff79c6;
+    --nav-background-color: #282a36;
+    --nav-hover-link-color: #ff79c6;
+    --nav-hover-background-color: #44475a;
+}
+
+html {
+    background-color: var(--primary-color);
+}
+body {
+    max-width: 940px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 1em;
+}
+img {
+    max-width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-font);
+    color: var(--headline-color-on-white);
+}
+header {
+    padding: 1em;
+    text-align: center;
+    color: var(--paragraph-color-on-color);
+    background-color: var(--paragraph-background-color);
+}
+header > h1,
+header > h2 {
+    color: var(--headline-color-on-color);
+}
+
+p {
+    font-family: var(--paragraph-font);
+    color: var(--paragraph-color);
+    padding: 1em;
+}
+
+.colors {
+    width: 100%;
+    min-width: 350px;
+    margin: auto;
+    text-align: center;
+}
+.colors th {
+    background-color: #999;
+}
+.colors td {
+    width: 25%;
+    height: 3em;
+}
+
+.primary {
+    background-color: var(--primary-color);
+}
+/* #primary { */
+/*     background-color: var(--primary-color); */
+/* } */
+
+.secondary {
+    background-color: var(--secondary-color);
+}
+.accent1 {
+    background-color: var(--accent1-color);
+}
+.accent2 {
+    background-color: var(--accent2-color);
+}
+
+p.colored {
+    background-color: var(--paragraph-background-color);
+    color: var(--paragraph-color-on-color);
+}
+
+nav {
+    background-color: var(--nav-background-color);
+    font-family: var(--paragraph-font);
+    line-height: 3em;
+    text-align: center;
+    font-size: 1.2em;
+}
+nav > ul {
+    list-style-type: none;
+    display: flex;
+}
+nav a {
+    padding: 1em;
+    min-width: 70px;
+}
+nav a:link,
+nav a:visited {
+    color: var(--nav-link-color);
+}
+nav a:hover {
+    color: var(--nav-hover-link-color);
+    background-color: var(--nav-hover-background-color);
+}
+
+.sitemap {
+    display: grid;
+    justify-content: center;
+
+    grid-template-columns: repeat(6, 15%);
+    grid-template-rows: 3em 1.5em 1.5em 3em;
+    grid-template-areas:
+        ". . home home . ."
+        ". . . top . ."
+        ". left left right right ."
+        "page2 page2 . . page3 page3";
+}
+.sitemap > div {
+    text-align: center;
+}
+.sm-home {
+    grid-area: home;
+    background-color: #999;
+    line-height: 3em;
+}
+.sm-page2 {
+    grid-area: page2;
+    background-color: #999;
+    line-height: 3em;
+}
+.sm-page3 {
+    grid-area: page3;
+    background-color: #999;
+    line-height: 3em;
+}
+
+.top {
+    grid-area: top;
+    border-left: 1px solid;
+}
+
+.left {
+    grid-area: left;
+    border-top: 1px solid;
+    border-left: 1px solid;
+}
+
+.right {
+    grid-area: right;
+    border-top: 1px solid;
+    border-right: 1px solid;
+}
